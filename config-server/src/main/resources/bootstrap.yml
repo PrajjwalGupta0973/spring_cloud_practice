@@ -1,0 +1,22 @@
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/PrajjwalGupta0973/practice.git
+#          uri: file:///d:/experiment/repo
+          username: prajjwalgupta0973@gmail.com
+          password: newPrajjwalB4@
+#          default-label: main
+      label: main
+  application:
+    name: config-server
+    
+server:
+  port: 8111
+#logging:
+#  level:
+#    org.springframework: DEBUG 
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

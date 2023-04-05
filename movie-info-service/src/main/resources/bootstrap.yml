@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+
+spring: 
+  application: 
+    name: movie-info-service
+#  config:
+#    import: configserver
+  profiles:
+    active:
+    - development
+  cloud:
+    config:
+      uri:
+      - http://localhost:8111
+      label: main
+management: 
+  endpoints: 
+    web: 
+      base-path: /actuator
+      exposure:
+        include: health,info,refresh
+#logging:
+#  level:
+#    org.springframework: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
